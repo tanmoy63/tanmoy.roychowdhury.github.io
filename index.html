@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+<div class="home">
+
+ <p>
+  <img src="{{ 'http://tanmoy-roychowdhury.io/img/cornyem.jpg' | asset_path }}" height="200px" align="right" HSPACE = "50"/>
+My name is Emily Josephs. I'm currently a postdoc at the University of California, Davis. I'll be starting a faculty position in the plant biology department at Michigan State University in January, 2019.
+</p>
+
+<p>
+You can find me on
+<a href="http://www.twitter.com/emjosephs">Twitter</a> and
+<a href="http://github.com/emjosephs">Github</a>, 
+or email me at emjo at ucdavis.edu. 
+</p>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <!-- <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span> -->
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
